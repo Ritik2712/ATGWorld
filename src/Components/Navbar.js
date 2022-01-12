@@ -30,7 +30,6 @@ export default function Navbar() {
             localStorage.setItem("join", "True")
         }
     }
-    alert(x)
     return (
         <>
             <div className='Nav'>
