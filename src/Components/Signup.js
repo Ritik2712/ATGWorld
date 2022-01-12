@@ -11,7 +11,7 @@ export default function Signup(props) {
     const Submit = (data) => {
         axios({
             method: "POST",
-            url: "http://localhost:5000/users/add",
+            url: "https://pacific-bastion-74814.herokuapp.com/users/add",
             data
         }).then(res => {
             console.log(res.data);
