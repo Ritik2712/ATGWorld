@@ -22,7 +22,7 @@ export default function Navbar() {
         setDisp3(true)
         setDisp2(false)
     }
-    const x = localStorage.getItem("user")
+    const x = localStorage.getItem("group")
     const clicked = () => {
         if (localStorage.getItem("join") === "True") {
             localStorage.setItem("join", "False")
@@ -30,6 +30,7 @@ export default function Navbar() {
             localStorage.setItem("join", "True")
         }
     }
+    alert(x)
     return (
         <>
             <div className='Nav'>
@@ -55,7 +56,7 @@ export default function Navbar() {
                             </Form.Group>
                         </Form>
                     </Col>
-                    <Col>{x.firstName !== undefined ?
+                    <Col>{x !== undefined ?
                         <h5>Create an account <button className='but' onClick={signin}>It's Free</button><AiFillCaretDown /></h5> : <h5>{x}</h5>}
                     </Col>
                 </Row>
@@ -73,7 +74,7 @@ export default function Navbar() {
                     <AiOutlineArrowLeft />
                 </div>
                 <div className="group">
-                    <button onClick={clicked}>{x.groupJoin === "True" ? "Leave Group" : "Join Group"}</button>
+                    <button onClick={clicked}>{x === "True" ? "Leave Group" : "Join Group"}</button>
                 </div>
 
             </div>

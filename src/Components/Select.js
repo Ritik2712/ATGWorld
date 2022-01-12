@@ -7,7 +7,6 @@ import { Col, Row, Nav, Button, Dropdown, DropdownButton } from 'react-bootstrap
 export default function Select() {
     const x = localStorage.getItem("join")
     const [click, setclick] = useState(false)
-    console.log(x.firstName)
     const clicked = () => {
 
         if (localStorage.getItem("join") === "True") {
